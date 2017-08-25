@@ -1,6 +1,6 @@
 .langelis {
-	background-color: gray;
-	color: white;
+	background-color: yellow;
+	color: black;
 	text-align: center;
 }
 .sriftas {
@@ -8,7 +8,7 @@
         font-size: 150px;
 }
 .langelis2 {
-	background-color: gray;
+	background-color: yellow;
 	border: 2px solid black;
 	font-size: 150px;
 	float: left;

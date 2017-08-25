@@ -1,27 +1,34 @@
-var lucky = [];
-var gameover = false;
+var e;
 
-function get_number() {
-	if (!gameover) {
-		clear_table ();
-		var skaicius;
-		skaicius = Math.floor(Math.random() *4);
-		document.getElementById(skaicius).style.backgroundColor = "red";
-		lucky.push(skaicius);
-	}
-	check_gameover();
+function random() {
+	clear_table();
+	e = Math.floor(Math.random() *4);
+	document.getElementById(e).style.backgroundColor = "red";
+	
 }
 function clear_table() {
-	for (var i = 0; i <= 4; i++) {
+	for (var i = 0; i <= 3; i++) {
 		document.getElementById(i).style.backgroundColor = "gray";
 	}
 }
-function check_gameover() {
-	if (lucky.length <= 4) {
-			//zaidimas tesiasi
-	} else {
-		alert("Game is Over!");
-		gameover = true;
+
+function minus() {
+	if (e == 0) {
+		e = 4;
 	}
+
+	clear_table();
+	e--;
+	document.getElementById(e).style.backgroundColor = "red";
 }
+
+function plius() {
+	if (e ==4) {
+		e = -1;
+	}
+	clear_table();
+	e++;
+	document.getElementById(e).style.backgroundColor = "red";
+}
+
 
